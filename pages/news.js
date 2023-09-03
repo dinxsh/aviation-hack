@@ -15,7 +15,7 @@ export default function Home({ value }) {
                 <div className="flex justify-center items-center flex-col">
                     {value.map(news => {
                         return (
-                            <>
+                            <div key={1}>
                                 <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                                     <div class="p-5">
                                         <a href="#">
@@ -30,7 +30,7 @@ export default function Home({ value }) {
                                         </a>
                                     </div>
                                 </div><br></br>
-                            </>
+                            </div>
                         );
                     })}
                 </div>
