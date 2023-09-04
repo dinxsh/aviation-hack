@@ -43,16 +43,13 @@ function MoonWidget() {
         fetchData();
     }, []);
 
-    return (
-        <>
-            <Navbar />
+    var bgBackground = {
+        backgroundImage: `url(${"https://images.unsplash.com/photo-1447433589675-4aaa569f3e05?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1780&q=80"})`
+    };
 
-            <div id="contain_moon" class="inline-block" style={{ textAlign: 'center', paddingTop: '5px', paddingBottom: '5px' }} class="m-20">
-                <div style={{ fontWeight: 'bold', float: 'left' }}>The Moon Today</div><br></br>
-                <div style={{ marginTop: '-7px', marginBottom: '-15px', padding: '30px', filter: 'drop-shadow(0 0 30px hsl(220,100%,15%))', height: '100px' }}>
-                    <div dangerouslySetInnerHTML={{ __html: moonPhase }} />
-                </div>
-            </div>
+    return (
+        <div style={bgBackground}>
+            <Navbar />
 
             <div className="text-white p-10 m-10">
                 <header className="text-center mb-6">
@@ -61,7 +58,16 @@ function MoonWidget() {
 
                 <section className="max-w-2xl mx-auto p-6 mt-6 bg-gray-800 rounded-lg shadow-lg">
                     <h2 className="text-2xl font-bold mb-4">Moon Data Today</h2>
-                    <p className="text-lg">
+
+                    <div id="contain_moon" class="inline-block m-14" style={{ textAlign: 'center', paddingTop: '5px', paddingBottom: '5px' }}>
+                        <div style={{ marginTop: '-7px', marginBottom: '-15px', padding: '30px', filter: 'drop-shadow(0 0 30px hsl(220,100%,15%))', height: '100px' }}>
+                            <div dangerouslySetInnerHTML={{ __html: moonPhase }} />
+                            <br /><p>moon image today</p>
+                        </div>
+
+                    </div>
+
+                    <div className="text-lg inline-block">
                         {moonData ? (
                             <div>
                                 <p>{moonData.location.city} {moonData.location.country_code3} - {moonData.location.latitude}° {moonData.location.longitude}°</p>
@@ -69,13 +75,13 @@ function MoonWidget() {
                                 <p>distance: {moonData.moon_distance}</p>
                                 <p>parallactic angle: {moonData.moon_parallactic_angle}</p>
                                 <p>moonrise: {moonData.moonrise}</p>
-                                <p>moonset: {moonData.moonset}</p>
-                                <p>solar_noon: {moonData.moon_altitude}</p>
+                                <p>moonset: {moonData.moonset} AM</p>
+                                <p>solar_noon: {moonData.moon_altitude} PM</p>
                             </div>
                         ) : (
                             <p>Loading moon data...</p>
                         )}
-                    </p>
+                    </div>
                 </section><br />
 
                 <section className="max-w-2xl mx-auto p-6 bg-gray-800 rounded-lg shadow-lg">
@@ -106,7 +112,7 @@ function MoonWidget() {
 
 
             <Footer />
-        </>
+        </div>
     );
 }
 
