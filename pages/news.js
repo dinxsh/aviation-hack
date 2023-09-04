@@ -47,7 +47,7 @@ export default function Home({ value }) {
     );
 }
 export async function getServerSideProps() {
-    const res = await axios.get('http://localhost:3000/api/news');
+    const res = await axios.get('https://aviation-hack.vercel.app/api/news');
     const { data: value } = res;
     if (!value) {
         return {
