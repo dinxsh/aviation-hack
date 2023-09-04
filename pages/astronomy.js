@@ -18,7 +18,7 @@ export default function Home() {
             <div class="mt-20 mb-10 m-24">
                 <center>
                     <div className="bg-purple-500 p-6 rounded-lg shadow-lg text-white">
-                        <h2 className="text-2xl font-semibold mb-2">Today's Horoscope</h2>
+                        <h2 className="text-2xl font-semibold mb-2">Todays Horoscope</h2>
                         <p className="text-lg">Gemini (May 21 - June 20)</p>
                         <p className="text-sm mt-2"></p>
                     </div>
