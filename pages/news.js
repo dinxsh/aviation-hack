@@ -4,8 +4,14 @@ import Navbar from '../components/navbar';
 import Footer from '../components/footer';
 
 export default function Home({ value }) {
+
+    var bgBackground = {
+        backgroundImage: `url(${"https://images.unsplash.com/photo-1505506874110-6a7a69069a08?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80"})`,
+        'background-size': 'cover',
+    };
+
     return (
-        <>
+        <div style={bgBackground}>
             <Navbar />
             <div className="bg-bc min-h-screen">
                 <div className="flex justify-center">
@@ -37,7 +43,7 @@ export default function Home({ value }) {
                 </div>
             </div>
             <Footer />
-        </>
+        </div>
     );
 }
 export async function getServerSideProps() {
