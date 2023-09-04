@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import axios from 'axios';
-import Navbar from '@/components/navbar/';
+import Navbar from '../components/navbar';
+import Footer from '../components/footer';
 
 export default function Home({ value }) {
     return (
@@ -35,6 +36,7 @@ export default function Home({ value }) {
                     })}
                 </div>
             </div>
+            <Footer />
         </>
     );
 }
