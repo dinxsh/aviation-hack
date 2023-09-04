@@ -105,7 +105,7 @@ function MoonWidget() {
                     <ul className="list-disc pl-4">
                         <li className="text-lg">The moon is approximately 1/6th the size of Earth.</li>
                         <li className="text-lg">It takes about 27.3 days for the moon to orbit Earth.</li>
-                        <li className="text-lg">The moon has no atmosphere, so there's no weather.</li>
+                        <li className="text-lg">The moon has no atmosphere, so there&apos;s no weather.</li>
                     </ul>
                 </section>
             </div>
